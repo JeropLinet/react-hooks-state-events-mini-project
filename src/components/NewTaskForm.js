@@ -5,18 +5,18 @@ const NewTaskForm = ({ categories, onTaskFormSubmit }) => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
   const handleTextChange = (e) => {
-    setTaskText(e.target.value);
+    setTaskText(e.target.value)
   };
 
   const handleCategoryChange = (e) => {
-    setSelectedCategory(e.target.value);
+    setSelectedCategory(e.target.value)
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     const newTask = { text: taskText, category: selectedCategory };
-    onTaskFormSubmit(newTask);
-    setTaskText(''); 
+    onTaskFormSubmit(newTask)
+    setTaskText('') 
     setSelectedCategory(categories[0])
   };
 
@@ -36,7 +36,7 @@ const NewTaskForm = ({ categories, onTaskFormSubmit }) => {
       </label>
       <button type="submit">Add Task</button>
     </form>
-  );
-};
+  )
+}
 
-export default NewTaskForm;
+export default NewTaskForm

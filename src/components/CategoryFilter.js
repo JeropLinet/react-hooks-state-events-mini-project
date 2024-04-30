@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
 const CategoryFilter = ({ categories, tasks, setFilteredTasks }) => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All')
 
   const handleCategoryClick = (category) => {
-    setSelectedCategory(category);
+    setSelectedCategory(category)
     if (category === 'All') {
-      setFilteredTasks(tasks);
+      setFilteredTasks(tasks)
     } else {
       const filteredTasks = tasks.filter(task => task.category === category);
-      setFilteredTasks(filteredTasks);
+      setFilteredTasks(filteredTasks)
     }
   };
 
